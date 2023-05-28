@@ -650,7 +650,7 @@ class FPDF
 			}
 		}
 		if ($txt !== '') {
-			$txt = iconv('utf-8', 'cp1252', $txt);
+			$txt = iconv('utf-8', 'cp1252//IGNORE', $txt);
 			if (!isset($this->CurrentFont)) {
 				$this->Error('No font has been set');
 			}
